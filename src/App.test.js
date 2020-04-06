@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import App, { Search, Button, Table } from './App';
@@ -25,7 +25,13 @@ describe('App', () => {
             const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
+        describe('App', () => {
+        const element = mount(<App/>);
+             test('Creates Search Button', () => {
+                expect(element.find(Button).length).toEqual(1);
+        });
 
+    });
 
 });
 
@@ -97,6 +103,5 @@ describe('Button', () => {
                 expect(element.find('.table-row').length).toBe(2);
             });
         });
-
 
 
