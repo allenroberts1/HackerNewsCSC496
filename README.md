@@ -8,6 +8,10 @@ First of all this project is done with ReactJS and I also implemented cookies an
 ### Try it Out!
     https://allenroberts1.github.io/HackerNewsCSC496/
 
-### Screenshots
-    ![hackernews1](https://user-images.githubusercontent.com/50081814/80991221-ac9a5e80-8e05-11ea-881b-e70559dfecc9.PNG)
 
+### Using the project
+    Start with pulling it then npm install within the project. 
+    After that you'll need to enter the following: - npm install --save enzyme enzyme-adapter-react-16 react-test-rendere
+                                                   - npm install js-cookie --save
+    Then npm start and it will run the project.
+                                                
