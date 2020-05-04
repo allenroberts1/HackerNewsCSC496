@@ -38,6 +38,16 @@ overflow: hidden;
 text-overflow: ellipsis;
 padding: 0 5px;
 }
+
+.table-row:nth-of-type(odd){ 
+display: flex; 
+line-height: 24px; 
+white-space: nowrap; 
+margin: 10px 0; 
+padding: 10px;
+background: #ccc; 
+}
+
 .button-inline {
 border-width: 0;
 background: transparent;
