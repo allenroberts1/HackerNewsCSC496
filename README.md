@@ -7,3 +7,6 @@ First of all this project is done with ReactJS and I also implemented cookies an
 
 ### Try it Out!
     https://allenroberts1.github.io/HackerNewsCSC496/
+
+### Screenshots
+    ![alt text](https://github.com/allenroberts1/HackerNewsCSC496/blob/master/hackernews1.png?raw=true)
