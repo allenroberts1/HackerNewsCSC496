@@ -9,4 +9,5 @@ First of all this project is done with ReactJS and I also implemented cookies an
     https://allenroberts1.github.io/HackerNewsCSC496/
 
 ### Screenshots
-    ![alt text](https://github.com/allenroberts1/HackerNewsCSC496/blob/master/hackernews1.png?raw=true)
+    ![hackernews1](https://user-images.githubusercontent.com/50081814/80991221-ac9a5e80-8e05-11ea-881b-e70559dfecc9.PNG)
+
