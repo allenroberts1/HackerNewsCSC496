@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 import './App.css';
 
+import Cookies from 'js-cookie';
 
 
-const DEFAULT_QUERY = 'redux';
+let DEFAULT_QUERY = 'redux';
 
 const DEFAULT_PAGE = 0;
 
@@ -25,6 +26,7 @@ const PARAM_HPP = 'hitsPerPage=';
 
 
 class App extends Component {
+    
 
 
 
@@ -40,7 +42,7 @@ class App extends Component {
 
             searchKey: '',
 
-            searchTerm: DEFAULT_QUERY,
+            searchTerm: Cookies.get('search') || DEFAULT_QUERY,
 
         };
 
@@ -64,13 +66,16 @@ class App extends Component {
 
     componentDidMount() {
 
-        const { searchTerm } = this.state;
 
+        const { searchTerm } = this.state;
+        
         this.setState({ searchKey: searchTerm });
+
 
         this.fetchSearchTopstories(searchTerm, DEFAULT_PAGE);
 
     }
+
 
 
 
@@ -152,6 +157,9 @@ class App extends Component {
 
 
 
+       Cookies.set('search', searchTerm, { path: '/' });
+
+
         if (this.needsToSearchTopstories(searchTerm)) {
 
             this.fetchSearchTopstories(searchTerm, DEFAULT_PAGE);
@@ -198,15 +206,17 @@ class App extends Component {
 
     render() {
 
+        let{
+            searchTerm
+        } = this.state;
         const {
-
-            searchTerm,
 
             results,
 
             searchKey
 
         } = this.state;
+
 
 
 
@@ -236,6 +246,7 @@ class App extends Component {
 
         return (
 
+
             <div className="page">
 
             <div className="interactions">
@@ -243,6 +254,9 @@ class App extends Component {
             <Search
 
             value={searchTerm}
+
+
+
 
             onChange={this.onSearchChange}
 
@@ -394,7 +408,7 @@ type="button"
 
 export default App;
 export {
-  Button,
-  Search,
-  Table,
+Button,
+    Search,
+    Table,
 };
